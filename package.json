@@ -1,0 +1,16 @@
+{
+  "name": "landing-01-bee",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "'",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "gsap": "^3.12.7",
+    "three": "^0.176.0"
+  }
+}
