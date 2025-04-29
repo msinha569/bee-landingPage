@@ -3,7 +3,7 @@ name: Deploy Static Site to S3
 on:
   push:
     branches:
-      - main  # Change this if you're using a different branch
+      - main
 
 jobs:
   deploy:
@@ -26,3 +26,9 @@ jobs:
             --delete \
             --exclude ".git/*" \
             --exclude ".github/*"
+
+      - name: Invalidate CloudFront Cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"
