@@ -157,11 +157,18 @@ header .content-fit nav ul{
     position: fixed;
     inset: 0;
     /* background-color: red; */
-    z-index: 100;
+  
     pointer-events: none;
+    z-index: 999;
 }
 
-
+canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+   
+  }
+  
 
 @media screen and (max-width: 1023px){
     #banner .title {
@@ -193,7 +200,5 @@ header .content-fit nav ul{
     #contact .sign {
         font-size: 2em;
     }
-    #container3D {
-        position: absolute;
-    }
+
 }
